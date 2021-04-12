@@ -202,9 +202,10 @@
                       <av:PointCollection x:Key="ConnectorLocation">130,482 130,532</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Check Headers" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Check Headers" sap:VirtualizedContainerService.HintSize="604,1432" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Int32" Name="headerCounter" />
+                      <Variable x:TypeArguments="x:Int32" Name="writeCellHeaderCounter" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -212,7 +213,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="875,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">[headerColumns]</OutArgument>
                       </Assign.To>
@@ -220,7 +221,7 @@
                         <InArgument x:TypeArguments="x:Int32">[theFirstRow.Columns.Count]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="875,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                    <Assign sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_5">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">[headerCounter]</OutArgument>
                       </Assign.To>
@@ -228,9 +229,17 @@
                         <InArgument x:TypeArguments="x:Int32">0</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="875,1113" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                    <Assign sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[writeCellHeaderCounter]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">2</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="562,1040" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                       <ui:InterruptibleWhile.Body>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="839,948" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,875" sap2010:WorkflowViewState.IdRef="Sequence_11">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="tempHeaderCell" />
                             <Variable x:TypeArguments="x:String" Name="headerCell" />
@@ -240,7 +249,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[tempHeaderCell]</OutArgument>
                             </Assign.To>
@@ -248,7 +257,7 @@
                               <InArgument x:TypeArguments="x:String">[outputDT.Rows(0).Item(headerCounter).ToString]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                          <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[headerCell]</OutArgument>
                             </Assign.To>
@@ -256,66 +265,36 @@
                               <InArgument x:TypeArguments="x:String">[theFirstRow.Rows(0).Item(headerCounter).ToString]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <If Condition="[tempHeaderCell &lt;&gt; headerCell]" sap:VirtualizedContainerService.HintSize="797,455" sap2010:WorkflowViewState.IdRef="If_3">
+                          <If Condition="[tempHeaderCell &lt;&gt; headerCell]" sap:VirtualizedContainerService.HintSize="484,483" sap2010:WorkflowViewState.IdRef="If_3">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,298" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,307" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:WriteCell Cell="[&quot;A&quot; + (headerCounter + 2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Sheet1" Text="[(headerCounter + 1).ToString + &quot;. başlık formata uygun değil.&quot;]" WorkbookPath="Output\Finding Results.xlsx" />
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                                  <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="272,153" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[(headerCounter + 1).ToString + &quot;. başlık formata uygun değil.&quot;]" />
-                                    </Sequence>
-                                  </ui:CommentOut.Body>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:CommentOut>
+                                <ui:WriteCell Cell="[&quot;A&quot; + writeCellHeaderCounter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Sheet1" Text="[(headerCounter + 1).ToString + &quot;. başlık formata uygun değil.&quot;]" WorkbookPath="Output\Finding Results.xlsx" />
+                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[writeCellHeaderCounter]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[writeCellHeaderCounter + 1]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,298" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                              <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:WriteCell Cell="[&quot;A&quot; + (headerCounter + 2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Sheet1" Text="[(headerCounter + 1).ToString + &quot;. başlık formata uygun.&quot;]" WorkbookPath="Output\Finding Results.xlsx" />
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-                                  <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="272,153" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[(headerCounter + 1).ToString + &quot;. başlık formata uygun.&quot;]" />
-                                    </Sequence>
-                                  </ui:CommentOut.Body>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:CommentOut>
                               </Sequence>
                             </If.Else>
                           </If>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="797,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[(headerCounter + 1).ToString]" />
-                          <Assign sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Int32">[headerCounter]</OutArgument>
                             </Assign.To>
@@ -338,11 +317,11 @@
                           <av:Size x:Key="ShapeSize">200,66</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Check Empty Cells" sap:VirtualizedContainerService.HintSize="696,1678" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                      <Sequence DisplayName="Check Empty Cells" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_17">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
                           <Variable x:TypeArguments="x:Int32" Name="columnCounter" />
-                          <Variable x:TypeArguments="x:Int32" Name="writeCellCounter" />
+                          <Variable x:TypeArguments="x:Int32" Name="writeEmptyCellCounter" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -351,19 +330,19 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <Assign sap:VirtualizedContainerService.HintSize="654,60" sap2010:WorkflowViewState.IdRef="Assign_8">
                           <Assign.To>
-                            <OutArgument x:TypeArguments="x:Int32">[writeCellCounter]</OutArgument>
+                            <OutArgument x:TypeArguments="x:Int32">[writeEmptyCellCounter]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
                             <InArgument x:TypeArguments="x:Int32">2</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:ForEachRow CurrentIndex="[rowIndex]" DataTable="[outputDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="654,1486" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                        <ui:ForEachRow CurrentIndex="[rowIndex]" DataTable="[outputDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="654,1284" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                           <ui:ForEachRow.Body>
                             <ActivityAction x:TypeArguments="sd:DataRow">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                               </ActivityAction.Argument>
-                              <Sequence sap:VirtualizedContainerService.HintSize="604,1338" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                              <Sequence sap:VirtualizedContainerService.HintSize="604,1136" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -377,9 +356,9 @@
                                     <InArgument x:TypeArguments="x:Int32">0</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="562,1146" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                                <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="562,944" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
                                   <ui:InterruptibleWhile.Body>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="526,981" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="526,779" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="ui:GenericValue" Name="rowItem" />
                                       </Sequence.Variables>
@@ -401,20 +380,18 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:WriteCell Cell="[&quot;B&quot; + writeCellCounter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Sheet1" Text="[(rowIndex + 1).ToString + &quot;. satır &quot; + (columnCounter + 1).ToString + &quot;. sütun hücresi boş.&quot;]" WorkbookPath="Output\Finding Results.xlsx" />
+                                            <ui:WriteCell Cell="[&quot;B&quot; + writeEmptyCellCounter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Sheet1" Text="[(rowIndex + 1).ToString + &quot;. satır &quot; + (columnCounter + 1).ToString + &quot;. sütun hücresi boş.&quot;]" WorkbookPath="Output\Finding Results.xlsx" />
                                             <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_9">
                                               <Assign.To>
-                                                <OutArgument x:TypeArguments="x:Int32">[writeCellCounter]</OutArgument>
+                                                <OutArgument x:TypeArguments="x:Int32">[writeEmptyCellCounter]</OutArgument>
                                               </Assign.To>
                                               <Assign.Value>
-                                                <InArgument x:TypeArguments="x:Int32">[writeCellCounter + 1]</InArgument>
+                                                <InArgument x:TypeArguments="x:Int32">[writeEmptyCellCounter + 1]</InArgument>
                                               </Assign.Value>
                                             </Assign>
                                           </Sequence>
                                         </If.Then>
                                       </If>
-                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;columnCounter: &quot; + columnCounter.ToString]" />
-                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;rowIndex: &quot; + rowIndex.ToString]" />
                                       <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_7">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:Int32">[columnCounter]</OutArgument>
