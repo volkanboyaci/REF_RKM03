@@ -77,7 +77,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Main Flowchart" sap:VirtualizedContainerService.HintSize="872,960" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Main Flowchart" sap:VirtualizedContainerService.HintSize="634,1070" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="RCMOutputDT" />
       <Variable x:TypeArguments="sd:DataTable" Name="theFirstRow" />
@@ -94,19 +94,19 @@
         <av:Point x:Key="ShapeLocation">170,0</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">200,75 200,125</av:PointCollection>
-        <x:Double x:Key="Width">837.5</x:Double>
-        <x:Double x:Key="Height">924</x:Double>
+        <x:Double x:Key="Width">600</x:Double>
+        <x:Double x:Key="Height">1034</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID6">
+    <FlowStep x:Name="__ReferenceID7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">100,125</av:Point>
           <av:Size x:Key="ShapeSize">200,66</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">200,191 200,221 201,221 201,243</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">200,191 200,221 201,221 201,241</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Sequence DisplayName="Get Excel DT" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -184,9 +184,9 @@
         <FlowStep x:Name="__ReferenceID1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">101,243</av:Point>
+              <av:Point x:Key="ShapeLocation">101,241</av:Point>
               <av:Size x:Key="ShapeSize">200,66</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">201,309 201,361</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">201,307 201,357</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Sequence DisplayName="Create Findings Excel" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -224,9 +224,9 @@
             <FlowStep x:Name="__ReferenceID2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">101,361</av:Point>
+                  <av:Point x:Key="ShapeLocation">101,357</av:Point>
                   <av:Size x:Key="ShapeSize">200,66</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">201,427 201,479</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">201,423 201,473</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Sequence DisplayName="Read Headers" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
@@ -250,9 +250,9 @@
                 <FlowStep x:Name="__ReferenceID0">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">101,479</av:Point>
+                      <av:Point x:Key="ShapeLocation">101,473</av:Point>
                       <av:Size x:Key="ShapeSize">200,66</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">201,545 201,597</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">201,539 201,589</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Sequence DisplayName="03 - Check Headers" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -366,9 +366,9 @@
                     <FlowStep x:Name="__ReferenceID3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">101,597</av:Point>
+                          <av:Point x:Key="ShapeLocation">101,589</av:Point>
                           <av:Size x:Key="ShapeSize">200,66</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">201,663 201,715</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">201,655 201,705</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Sequence DisplayName="01 - Check Empty Cells" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_17">
@@ -469,9 +469,9 @@
                         <FlowStep x:Name="__ReferenceID4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">101,715</av:Point>
+                              <av:Point x:Key="ShapeLocation">101,705</av:Point>
                               <av:Size x:Key="ShapeSize">200,97</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">301,764.5 331,764.5 331,160 360,160</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">301,753.5 331,753.5 331,155 351,155</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Sequence sap2010:Annotation.AnnotationText="Not complete" DisplayName="04 - Check Banking Sub Processes" sap:VirtualizedContainerService.HintSize="200,97" sap2010:WorkflowViewState.IdRef="Sequence_23">
@@ -640,11 +640,12 @@
                             <FlowStep x:Name="__ReferenceID5">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">360,126</av:Point>
+                                  <av:Point x:Key="ShapeLocation">351,122</av:Point>
                                   <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">451,188 451,238</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="05 and 06 - Check Control Code&amp;No" sap:VirtualizedContainerService.HintSize="660,2290" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                              <Sequence DisplayName="05 and 06 - Check Control Code&amp;No" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
                                   <Variable x:TypeArguments="x:Int32" Name="excelCellNoC" />
@@ -791,6 +792,127 @@
                                   </ui:ForEachRow.Body>
                                 </ui:ForEachRow>
                               </Sequence>
+                              <FlowStep.Next>
+                                <FlowStep x:Name="__ReferenceID6">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">351,238</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence DisplayName="09" sap:VirtualizedContainerService.HintSize="1147,1482" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:Int32" Name="excelCellNoE" />
+                                      <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="1105,60" sap2010:WorkflowViewState.IdRef="Assign_38">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[excelCellNoE]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">2</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:ForEachRow CurrentIndex="[rowIndex]" DataTable="[RCMOutputDTwithTitle]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1105,1290" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+                                      <ui:ForEachRow.Body>
+                                        <ActivityAction x:TypeArguments="sd:DataRow">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1055,1142" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:String" Name="kontrolSekliRowItem" />
+                                              <Variable x:TypeArguments="x:String" Name="testinGerceklestirildiSistemRowItem" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Kontrol Şekli&#xD;&#xA;(Otomatik, Manuel, BT Bağımlı Manuel)" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="1013,64" sap2010:WorkflowViewState.IdRef="GetRowItem_7" Row="[row]">
+                                              <ui:GetRowItem.Value>
+                                                <OutArgument x:TypeArguments="x:String">[kontrolSekliRowItem]</OutArgument>
+                                              </ui:GetRowItem.Value>
+                                            </ui:GetRowItem>
+                                            <Assign sap:VirtualizedContainerService.HintSize="1013,60" sap2010:WorkflowViewState.IdRef="Assign_36">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[kontrolSekliRowItem]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[kontrolSekliRowItem.Trim]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Testin Gerçekleştirildiği Sistem" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="1013,64" sap2010:WorkflowViewState.IdRef="GetRowItem_8" Row="[row]">
+                                              <ui:GetRowItem.Value>
+                                                <OutArgument x:TypeArguments="x:String">[testinGerceklestirildiSistemRowItem]</OutArgument>
+                                              </ui:GetRowItem.Value>
+                                            </ui:GetRowItem>
+                                            <Assign sap:VirtualizedContainerService.HintSize="1013,60" sap2010:WorkflowViewState.IdRef="Assign_37">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[testinGerceklestirildiSistemRowItem]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[testinGerceklestirildiSistemRowItem.Trim]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <If Condition="[kontrolSekliRowItem = &quot;Manuel&quot;]" sap:VirtualizedContainerService.HintSize="1013,642" sap2010:WorkflowViewState.IdRef="If_17">
+                                              <If.Then>
+                                                <If Condition="[testinGerceklestirildiSistemRowItem &lt;&gt; &quot;-&quot;]" sap:VirtualizedContainerService.HintSize="484,484" sap2010:WorkflowViewState.IdRef="If_15">
+                                                  <If.Then>
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="376,307" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:WriteCell Cell="[&quot;E&quot; + excelCellNoE.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_9" SheetName="Sheet1" Text="[(rowIndex + 1).ToString + &quot;. satırdaki değer doğru değil: &quot; + testinGerceklestirildiSistemRowItem]" WorkbookPath="Output\Finding Results.xlsx" />
+                                                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_40">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:Int32">[excelCellNoE]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:Int32">[excelCellNoE + 1]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                </If>
+                                              </If.Then>
+                                              <If.Else>
+                                                <If Condition="[testinGerceklestirildiSistemRowItem = &quot;-&quot;]" sap:VirtualizedContainerService.HintSize="484,484" sap2010:WorkflowViewState.IdRef="If_16">
+                                                  <If.Then>
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="376,307" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:WriteCell Cell="[&quot;E&quot; + excelCellNoE.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_10" SheetName="Sheet1" Text="[(rowIndex + 1).ToString + &quot;. satırdaki değer doğru değil: &quot; + testinGerceklestirildiSistemRowItem]" WorkbookPath="Output\Finding Results.xlsx" />
+                                                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_41">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:Int32">[excelCellNoE]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:Int32">[excelCellNoE + 1]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                </If>
+                                              </If.Else>
+                                            </If>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEachRow.Body>
+                                    </ui:ForEachRow>
+                                  </Sequence>
+                                </FlowStep>
+                              </FlowStep.Next>
                             </FlowStep>
                           </FlowStep.Next>
                         </FlowStep>
@@ -810,5 +932,6 @@
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
   </Flowchart>
 </Activity>
